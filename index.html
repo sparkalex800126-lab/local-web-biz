@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans TC', sans-serif; background: #FAFAF8; color: #1A1A1A; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .container { text-align: center; padding: 2rem; }
+    h1 { font-size: 1.5rem; margin-bottom: 2rem; font-weight: 400; }
+    .demos { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    a { display: block; padding: 1.5rem 2.5rem; background: white; border-radius: 12px; text-decoration: none; color: #1A1A1A; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s; }
+    a:hover { transform: translateY(-2px); }
+    .name { font-size: 1.1rem; font-weight: 500; }
+    .tag { font-size: 0.8rem; color: #6B6B6B; margin-top: 0.3rem; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>網站設計 Demo</h1>
+    <div class="demos">
+      <a href="demos/eton-kids/">
+        <div class="name">伊頓國際托嬰中心</div>
+        <div class="tag">溫暖沉穩風格</div>
+      </a>
+      <a href="demos/libaoer/">
+        <div class="name">立寶兒托嬰中心</div>
+        <div class="tag">清新活潑風格</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
