@@ -158,7 +158,7 @@
             }
 
             // Submit to Google Sheets via Apps Script
-            const GOOGLE_SCRIPT_URL = 'PENDING_SETUP';
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyBu_avsdhiUO9YSSGU3T9yR7UbtVAp8xzhrRG4wV_Jg10INYRQEsKFgTKUcGI8PAC2/exec';
 
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
