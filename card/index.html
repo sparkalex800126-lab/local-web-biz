@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Eric｜PageReady 在地網站設計</title>
+    <meta name="description" content="幫竹北店家 3 天做好專業網站。免費 Demo，滿意再談。">
+    <meta property="og:title" content="Eric｜PageReady 在地網站設計">
+    <meta property="og:description" content="幫竹北店家 3 天做好專業網站。免費 Demo，滿意再談。">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://pagereadytw.cc/card/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           PageReady Digital Card
+           Matches landing page color system
+           ============================================ */
+        :root {
+            --color-primary: #1B2D4F;
+            --color-primary-light: #2A4470;
+            --color-accent: #3B82F6;
+            --color-accent-light: #60A5FA;
+            --color-success: #10B981;
+            --color-bg: #FAFBFC;
+            --color-bg-alt: #F1F5F9;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #64748B;
+            --color-border: #E2E8F0;
+            --color-white: #FFFFFF;
+            --font-sans: 'Noto Sans TC', 'DM Sans', system-ui, -apple-system, sans-serif;
+            --font-en: 'DM Sans', system-ui, sans-serif;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-full: 9999px;
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-sans);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, #1a3a5c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: var(--color-text);
+        }
+
+        .card {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Header --- */
+        .card-header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            padding: 32px 24px 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .card-header::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0; right: 0;
+            height: 24px;
+            background: var(--color-white);
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 32px;
+            color: white;
+            font-weight: 700;
+            font-family: var(--font-en);
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+
+        .card-name {
+            color: var(--color-white);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .card-title {
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .card-tagline {
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+            margin-top: 8px;
+            font-weight: 400;
+        }
+
+        /* --- Body --- */
+        .card-body {
+            padding: 20px 24px 8px;
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius-full);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+
+        .brand-badge .icon { font-size: 14px; }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        /* --- Contact Links --- */
+        .contact-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            text-decoration: none;
+            color: var(--color-text);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .contact-item:last-child { border-bottom: none; }
+
+        .contact-item:hover { color: var(--color-accent); }
+        .contact-item:active { transform: scale(0.98); }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .contact-icon.phone { background: #ECFDF5; color: var(--color-success); }
+        .contact-icon.line { background: #ECFDF5; color: #06C755; }
+        .contact-icon.web { background: #EFF6FF; color: var(--color-accent); }
+
+        .contact-info { flex: 1; }
+
+        .contact-label {
+            font-size: 12px;
+            color: var(--color-text-secondary);
+            margin-bottom: 2px;
+        }
+
+        .contact-value {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .contact-arrow {
+            color: var(--color-text-secondary);
+            font-size: 14px;
+        }
+
+        /* --- Area Tags --- */
+        .area-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .area-tag {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius-full);
+            padding: 5px 12px;
+            font-size: 13px;
+            color: var(--color-text-secondary);
+            font-weight: 500;
+        }
+
+        .area-tag .pin { margin-right: 4px; }
+
+        /* --- Demo Preview --- */
+        .demo-section {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .demo-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .demo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            color: var(--color-text);
+            transition: all 0.2s;
+            border: 1px solid var(--color-border);
+        }
+
+        .demo-link:hover {
+            border-color: var(--color-accent);
+            box-shadow: var(--shadow-md);
+        }
+
+        .demo-link .emoji { font-size: 24px; }
+        .demo-link .demo-info { flex: 1; }
+
+        .demo-link .demo-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 1px;
+        }
+
+        .demo-link .demo-desc {
+            font-size: 12px;
+            color: var(--color-text-secondary);
+        }
+
+        /* --- CTA --- */
+        .card-footer {
+            padding: 0 24px 24px;
+        }
+
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+            color: white;
+            border: none;
+            border-radius: var(--radius-lg);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: var(--font-sans);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+        }
+
+        .cta-btn:active { transform: translateY(0); }
+
+        .save-contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: transparent;
+            color: var(--color-text-secondary);
+            border: 1.5px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            font-size: 14px;
+            font-weight: 600;
+            font-family: var(--font-sans);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .save-contact:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 420px) {
+            body { padding: 12px; }
+            .card { border-radius: var(--radius-lg); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <!-- Header -->
+    <div class="card-header">
+        <div class="avatar">E</div>
+        <div class="card-name">Eric</div>
+        <div class="card-title">網站設計顧問 ／ 創辦人</div>
+        <div class="card-tagline">幫竹北店家 3 天做好專業網站</div>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body">
+        <div class="brand-badge">
+            <span class="icon">◈</span>
+            PageReady 在地網站
+        </div>
+
+        <!-- Contact -->
+        <div class="section-label">聯絡方式</div>
+        <ul class="contact-list">
+            <li>
+                <a class="contact-item" href="tel:0912345678">
+                    <div class="contact-icon phone">📞</div>
+                    <div class="contact-info">
+                        <div class="contact-label">手機</div>
+                        <div class="contact-value">0912-345-678</div>
+                    </div>
+                    <span class="contact-arrow">›</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-item" href="https://line.me/ti/p/YOUR_LINE_ID" target="_blank">
+                    <div class="contact-icon line">💬</div>
+                    <div class="contact-info">
+                        <div class="contact-label">LINE</div>
+                        <div class="contact-value">加好友聊聊</div>
+                    </div>
+                    <span class="contact-arrow">›</span>
+                </a>
+            </li>
+            <li>
+                <a class="contact-item" href="https://pagereadytw.cc?ref=card" target="_blank">
+                    <div class="contact-icon web">🌐</div>
+                    <div class="contact-info">
+                        <div class="contact-label">網站</div>
+                        <div class="contact-value">pagereadytw.cc</div>
+                    </div>
+                    <span class="contact-arrow">›</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Service Area -->
+        <div class="section-label">服務區域</div>
+        <div class="area-tags">
+            <span class="area-tag"><span class="pin">📍</span>竹北</span>
+            <span class="area-tag"><span class="pin">📍</span>新竹</span>
+            <span class="area-tag"><span class="pin">📍</span>竹東</span>
+        </div>
+
+        <!-- Demo -->
+        <div class="demo-section">
+            <div class="demo-label">🎨 作品預覽</div>
+            <a class="demo-link" href="https://pagereadytw.cc/demos/eton-kids/?ref=card" target="_blank">
+                <span class="emoji">🏫</span>
+                <div class="demo-info">
+                    <div class="demo-name">托嬰中心 Demo</div>
+                    <div class="demo-desc">點擊查看完整網站範例</div>
+                </div>
+                <span class="contact-arrow">›</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer CTA -->
+    <div class="card-footer">
+        <a class="cta-btn" href="https://pagereadytw.cc?ref=card#contact">
+            🚀 免費幫你做 Demo
+        </a>
+        <button class="save-contact" onclick="downloadVCard()">
+            📥 儲存聯絡人
+        </button>
+    </div>
+</div>
+
+<script>
+function downloadVCard() {
+    const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'N:;Eric;;;',
+        'FN:Eric — PageReady 在地網站',
+        'ORG:PageReady 在地網站',
+        'TITLE:網站設計顧問',
+        'TEL;TYPE=CELL:0912345678',
+        'URL:https://pagereadytw.cc',
+        'NOTE:幫竹北店家 3 天做好專業網站。免費 Demo，滿意再談。',
+        'END:VCARD'
+    ].join('\n');
+
+    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Eric-PageReady.vcf';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>
