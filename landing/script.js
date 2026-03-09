@@ -157,19 +157,40 @@
                 return;
             }
 
-            // Simulate form submission
+            // Submit to Google Sheets via Apps Script
+            const GOOGLE_SCRIPT_URL = 'PENDING_SETUP';
+
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = '送出中...';
             submitBtn.disabled = true;
 
-            // Simulate API call
-            setTimeout(() => {
-                showFormMessage('感謝您的詢問！我們會在 24 小時內與您聯繫。', 'success');
+            if (GOOGLE_SCRIPT_URL === 'PENDING_SETUP') {
+                // Fallback: show message + log to console until Google Script is configured
+                console.log('Form data (pending backend setup):', data);
+                setTimeout(() => {
+                    showFormMessage('感謝您的詢問！我們會盡快與您聯繫。', 'success');
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 800);
+                return;
+            }
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).then(() => {
+                showFormMessage('感謝您的詢問！我們會盡快與您聯繫。', 'success');
                 contactForm.reset();
+            }).catch(() => {
+                showFormMessage('送出時發生問題，請直接用電話或 LINE 聯繫我們。', 'error');
+            }).finally(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            }, 1000);
+            });
         });
     }
 
