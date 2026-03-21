@@ -170,7 +170,7 @@ for i in $(seq 0 $((GALLERY_COUNT - 1))); do
   SIZE=$(jq -r ".gallery[$i].size // \"600\"" "$CONFIG_FILE")
   HEIGHT=$(( SIZE * 3 / 4 ))
   GALLERY_HTML+="        <div class=\"gallery-item\">
-          <img src=\"https://picsum.photos/seed/${IMAGE_ID}/${SIZE}/${HEIGHT}\"
+          <img src=\"https://images.unsplash.com/${IMAGE_ID}?w=${SIZE}&q=80&auto=format&fit=crop\"
                alt=\"${ALT}\" loading=\"lazy\">
           <div class=\"gallery-item-overlay\"><span>${LABEL}</span></div>
         </div>

@@ -5,42 +5,45 @@
   "store_slug": "home-me",
   "store_type": "托嬰中心",
   "store_location": "新竹竹北",
-
   "primary_color": "#A8C686",
   "primary_light": "#C5DDA8",
   "primary_dark": "#7BA354",
   "primary_pale": "#F0F5E8",
   "accent_color": "#E8A87C",
   "accent_hover": "#D4956A",
-
   "phone": "03-558-1234",
   "address": "新竹縣竹北市光明六路東一段100號",
   "line_id": "home-me",
   "hours": "週一至週五 07:30 — 18:30",
-
   "nav_emoji": "🌾",
   "favicon_emoji": "🌾",
-
   "hero_badge": "🌟 新竹竹北專業托嬰中心",
-  "hero_image_id": "home-me-hero",
+  "hero_image_id": "photo-1546015720-b8b30df5aa27",
   "slogan": "用自然與溫暖，灌溉每一顆小小的種子<br>讓寶貝在愛裡扎根、在陪伴中茁壯",
-
   "cta_text": "預約參觀",
   "testimonial_section_nav": "家長回饋",
-
   "meta_description": "0-2歲嬰幼兒照護，低師生比、自然教育理念，給寶貝最溫暖的成長環境。",
-
-  "about_image_id": "home-me-about",
+  "about_image_id": "photo-1526634332515-d56c5fd16991",
   "about_title": "自然養育<br>溫暖成長",
   "about_p1": "禾米托嬰中心位於新竹竹北，以「自然、溫暖、共好」為核心理念，為 0 至 2 歲的嬰幼兒提供專業且溫馨的日間照護服務。我們相信每個孩子都像一顆種子，需要適當的陽光、水分和愛，就能長成獨一無二的美好模樣。",
   "about_p2": "我們的團隊由合格保母與幼教專業人員組成，融合自然教育理念，透過五感探索、自然素材遊戲與大量的戶外體驗，讓寶貝在遊戲中學習、在自然中成長。",
-
   "stats": [
-    { "num": "5", "suffix": "+", "label": "年專業經驗" },
-    { "num": "1", "suffix": ":4", "label": "低師生比例" },
-    { "num": "150", "suffix": "+", "label": "累計照護寶貝" }
+    {
+      "num": "5",
+      "suffix": "+",
+      "label": "年專業經驗"
+    },
+    {
+      "num": "1",
+      "suffix": ":4",
+      "label": "低師生比例"
+    },
+    {
+      "num": "150",
+      "suffix": "+",
+      "label": "累計照護寶貝"
+    }
   ],
-
   "features_title": "為什麼家長們選擇禾米？",
   "features_subtitle": "我們以自然教育為核心，用心打造讓寶貝安心成長的溫暖環境",
   "features": [
@@ -75,17 +78,40 @@
       "desc": "每日透過 LINE 分享寶貝的活動照片與成長紀錄，定期提供發展評估報告，讓家長掌握每個里程碑。"
     }
   ],
-
   "gallery_title": "溫暖自然的成長空間",
   "gallery_subtitle": "木質、綠意、陽光 — 我們為寶貝打造最接近自然的室內環境",
   "gallery": [
-    { "image_id": "home-me-play", "alt": "寬敞遊戲空間", "label": "自然遊戲區", "size": "800" },
-    { "image_id": "home-me-read", "alt": "閱讀角落", "label": "溫馨閱讀角", "size": "600" },
-    { "image_id": "home-me-explore", "alt": "感官探索", "label": "五感探索區", "size": "600" },
-    { "image_id": "home-me-nap", "alt": "午睡空間", "label": "舒適午睡室", "size": "600" },
-    { "image_id": "home-me-learn", "alt": "快樂學習", "label": "快樂學習時光", "size": "600" }
+    {
+      "image_id": "photo-1596464716127-f2a82984de30",
+      "alt": "寬敞遊戲空間",
+      "label": "自然遊戲區",
+      "size": "800"
+    },
+    {
+      "image_id": "photo-1515488042361-ee00e0ddd4e4",
+      "alt": "閱讀角落",
+      "label": "溫馨閱讀角",
+      "size": "600"
+    },
+    {
+      "image_id": "photo-1544776193-352d25ca82cd",
+      "alt": "感官探索",
+      "label": "五感探索區",
+      "size": "600"
+    },
+    {
+      "image_id": "photo-1609220136736-443140cffec6",
+      "alt": "午睡空間",
+      "label": "舒適午睡室",
+      "size": "600"
+    },
+    {
+      "image_id": "photo-1503454537195-1dcabb73ffb9",
+      "alt": "快樂學習",
+      "label": "快樂學習時光",
+      "size": "600"
+    }
   ],
-
   "testimonial_title": "家長們怎麼說",
   "testimonial_subtitle": "每一則回饋，都是我們持續進步的動力",
   "testimonials": [
@@ -108,32 +134,63 @@
       "role": "寶寶 1 歲 2 個月"
     }
   ],
-
   "contact_subtitle": "歡迎預約到園參觀，親自感受禾米的自然溫暖與專業",
   "service_emoji": "👶",
   "service_label": "收托對象",
   "service_value": "0 — 2 歲嬰幼兒",
   "map_embed": "https://maps.google.com/maps?q=24.8280,121.0120&z=17&hl=zh-TW&output=embed",
-
   "form_title": "線上預約參觀",
   "form_submit_text": "送出預約",
   "form_fields": [
     {
       "row": [
-        { "id": "parentName", "type": "text", "label": "家長姓名 *", "placeholder": "請輸入您的姓名", "required": true },
-        { "id": "phone", "type": "tel", "label": "聯絡電話 *", "placeholder": "例：0912-345-678", "required": true }
+        {
+          "id": "parentName",
+          "type": "text",
+          "label": "家長姓名 *",
+          "placeholder": "請輸入您的姓名",
+          "required": true
+        },
+        {
+          "id": "phone",
+          "type": "tel",
+          "label": "聯絡電話 *",
+          "placeholder": "例：0912-345-678",
+          "required": true
+        }
       ]
     },
     {
       "row": [
-        { "id": "babyAge", "type": "select", "label": "寶寶月齡", "options": ["請選擇", "0 — 3 個月", "4 — 6 個月", "7 — 12 個月", "13 — 18 個月", "19 — 24 個月"] },
-        { "id": "visitDate", "type": "date", "label": "希望參觀日期" }
+        {
+          "id": "babyAge",
+          "type": "select",
+          "label": "寶寶月齡",
+          "options": [
+            "請選擇",
+            "0 — 3 個月",
+            "4 — 6 個月",
+            "7 — 12 個月",
+            "13 — 18 個月",
+            "19 — 24 個月"
+          ]
+        },
+        {
+          "id": "visitDate",
+          "type": "date",
+          "label": "希望參觀日期"
+        }
       ]
     },
     {
-      "full": { "id": "message", "type": "textarea", "label": "其他留言", "placeholder": "有任何想詢問的問題，歡迎在此留言", "rows": 4 }
+      "full": {
+        "id": "message",
+        "type": "textarea",
+        "label": "其他留言",
+        "placeholder": "有任何想詢問的問題，歡迎在此留言",
+        "rows": 4
+      }
     }
   ],
-
   "footer_desc": "以自然教育為理念，用溫暖與專業守護寶貝的成長。我們是您育兒路上最值得信賴的夥伴。"
 }
