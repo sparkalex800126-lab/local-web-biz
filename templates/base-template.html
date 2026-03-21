@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{STORE_NAME}} — {{STORE_LOCATION}}專業{{STORE_TYPE}}，{{META_DESCRIPTION}}">
+  <title>{{STORE_NAME}} | {{STORE_NAME_EN}}</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{FAVICON_EMOJI}}</text></svg>">
+</head>
+<body>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-icon">{{NAV_EMOJI}}</span>
+        <span>{{STORE_SHORT_NAME}}</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">關於我們</a>
+        <a href="#features">服務特色</a>
+        <a href="#gallery">環境介紹</a>
+        <a href="#testimonials">{{TESTIMONIAL_SECTION_NAV}}</a>
+        <a href="#contact" class="nav-cta">{{CTA_TEXT}}</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="選單">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://picsum.photos/seed/{{HERO_IMAGE_ID}}/1600/900"
+           alt="{{STORE_NAME}}環境" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">{{HERO_BADGE}}</div>
+      <h1>{{STORE_SHORT_NAME}}<span class="accent">{{STORE_TYPE}}</span></h1>
+      <p class="hero-en">{{STORE_NAME_EN}}</p>
+      <p class="hero-slogan">{{SLOGAN}}</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">📞 {{CTA_TEXT}}</a>
+        <a href="https://line.me/R/ti/p/@{{LINE_ID}}" class="btn btn-line" target="_blank" rel="noopener">💬 LINE 諮詢</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="https://picsum.photos/seed/{{ABOUT_IMAGE_ID}}/800/600"
+               alt="{{STORE_NAME}}空間" loading="lazy">
+          <div class="about-image-accent"></div>
+          <div class="about-image-dots"></div>
+        </div>
+        <div class="about-text reveal reveal-delay-1">
+          <span class="section-label">About Us</span>
+          <h2>{{ABOUT_TITLE}}</h2>
+          <p>{{ABOUT_P1}}</p>
+          <p>{{ABOUT_P2}}</p>
+          <div class="about-stats">
+            <div class="stat-item reveal reveal-delay-1">
+              <div class="stat-number" data-count="{{STAT1_NUM}}" data-suffix="{{STAT1_SUFFIX}}">0{{STAT1_SUFFIX}}</div>
+              <div class="stat-label">{{STAT1_LABEL}}</div>
+            </div>
+            <div class="stat-item reveal reveal-delay-2">
+              <div class="stat-number" data-count="{{STAT2_NUM}}" data-suffix="{{STAT2_SUFFIX}}">0{{STAT2_SUFFIX}}</div>
+              <div class="stat-label">{{STAT2_LABEL}}</div>
+            </div>
+            <div class="stat-item reveal reveal-delay-3">
+              <div class="stat-number" data-count="{{STAT3_NUM}}" data-suffix="{{STAT3_SUFFIX}}">0{{STAT3_SUFFIX}}</div>
+              <div class="stat-label">{{STAT3_LABEL}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FEATURES ====== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label reveal">Our Features</span>
+        <h2 class="section-title reveal">{{FEATURES_TITLE}}</h2>
+        <p class="section-subtitle reveal">{{FEATURES_SUBTITLE}}</p>
+      </div>
+      <div class="features-grid">
+{{FEATURES_HTML}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GALLERY ====== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label reveal">Environment</span>
+        <h2 class="section-title reveal">{{GALLERY_TITLE}}</h2>
+        <p class="section-subtitle reveal">{{GALLERY_SUBTITLE}}</p>
+      </div>
+      <div class="gallery-grid reveal">
+{{GALLERY_HTML}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label reveal">Testimonials</span>
+        <h2 class="section-title reveal">{{TESTIMONIAL_TITLE}}</h2>
+        <p class="section-subtitle reveal">{{TESTIMONIAL_SUBTITLE}}</p>
+      </div>
+      <div class="testimonials-grid">
+{{TESTIMONIALS_HTML}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label reveal">Contact Us</span>
+        <h2 class="section-title reveal">{{CTA_TEXT}}</h2>
+        <p class="section-subtitle reveal">{{CONTACT_SUBTITLE}}</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>聯絡資訊</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-item-label">地址</div>
+              <div class="contact-item-value">{{ADDRESS}}</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-item-label">電話</div>
+              <div class="contact-item-value">
+                <a href="tel:{{PHONE_RAW}}">{{PHONE}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <div class="contact-item-label">服務時間</div>
+              <div class="contact-item-value">{{HOURS}}</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">{{SERVICE_EMOJI}}</div>
+            <div>
+              <div class="contact-item-label">{{SERVICE_LABEL}}</div>
+              <div class="contact-item-value">{{SERVICE_VALUE}}</div>
+            </div>
+          </div>
+          <a href="https://line.me/R/ti/p/@{{LINE_ID}}" class="btn btn-line contact-line-btn" target="_blank" rel="noopener">
+            💬 LINE 線上諮詢
+          </a>
+          <div class="contact-map">
+            <iframe
+              src="{{MAP_EMBED}}"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="{{STORE_NAME}}位置">
+            </iframe>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <form class="contact-form booking-form" action="#" method="POST">
+            <h3>{{FORM_TITLE}}</h3>
+{{FORM_HTML}}
+            <button type="submit" class="btn btn-primary form-submit">{{FORM_SUBMIT_TEXT}}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h4>{{NAV_EMOJI}} {{STORE_NAME}}</h4>
+          <p>{{FOOTER_DESC}}</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="https://line.me/R/ti/p/@{{LINE_ID}}" aria-label="LINE" target="_blank" rel="noopener">💬</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h5>快速連結</h5>
+          <a href="#about">關於我們</a>
+          <a href="#features">服務特色</a>
+          <a href="#gallery">環境介紹</a>
+          <a href="#testimonials">{{TESTIMONIAL_SECTION_NAV}}</a>
+          <a href="#contact">{{CTA_TEXT}}</a>
+        </div>
+        <div class="footer-links">
+          <h5>聯絡我們</h5>
+          <a href="tel:{{PHONE_RAW}}">📞 {{PHONE}}</a>
+          <a href="#">📍 {{ADDRESS}}</a>
+          <a href="#">🕐 {{HOURS}}</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© {{YEAR}} {{STORE_NAME}} {{STORE_NAME_EN}}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="回到頂部">↑</button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
